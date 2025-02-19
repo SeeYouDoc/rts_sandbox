@@ -1,0 +1,550 @@
+{
+  "resourceType": "Bundle",
+  "id": "adccf2c3-9dc4-4067-ba23-98982c4875dc",
+  "type": "transaction",
+  "timestamp": "2025-02-19T10:00:00+08:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:1e777fdb-8c91-4c3c-8669-83b427c6a4e4",
+      "resource": {
+        "resourceType": "Person",
+        "id": "1e777fdb-8c91-4c3c-8669-83b427c6a4e4",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Person",
+            "value": "1e777fdb-8c91-4c3c-8669-83b427c6a4e4"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "DL",
+                  "display": "Driver's License"
+                }
+              ],
+              "text": "Driver's License"
+            },
+            "system": "https://lto.gov.ph/",
+            "value": "D16-02-318979"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Castro",
+            "given": ["Vina"]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1983-03-19"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Person/1e777fdb-8c91-4c3c-8669-83b427c6a4e4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2a45c1d8-9567-4b42-8445-8d939f79c9d9",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "2a45c1d8-9567-4b42-8445-8d939f79c9d9",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "name": "Marikina City Health Office",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "govt",
+                "display": "Government"
+              }
+            ]
+          }
+        ],
+        "active": true
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/2a45c1d8-9567-4b42-8445-8d939f79c9d9"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3b56d2e9-a678-5c53-9556-9e04a8a8a8e0",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "3b56d2e9-a678-5c53-9556-9e04a8a8a8e0",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "name": "Metro Antipolo",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov",
+                "display": "Hospital"
+              }
+            ]
+          }
+        ],
+        "active": true
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Organization/3b56d2e9-a678-5c53-9556-9e04a8a8a8e0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c67e3fa-b789-6d64-a667-af15b9b9b9f1",
+      "resource": {
+        "resourceType": "Location",
+        "id": "4c67e3fa-b789-6d64-a667-af15b9b9b9f1",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "name": "Parang Health Center",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "COMM",
+                "display": "Health center"
+              }
+            ]
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/2a45c1d8-9567-4b42-8445-8d939f79c9d9"
+        },
+        "status": "active"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Location/4c67e3fa-b789-6d64-a667-af15b9b9b9f1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d78f4gb-c890-7e75-b778-bg26cac0c0g2",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "5d78f4gb-c890-7e75-b778-bg26cac0c0g2",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "prefix": ["Dr."],
+            "family": "Cruz",
+            "given": ["Reo"]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "62247001",
+                  "display": "General practitioner"
+                }
+              ]
+            }
+          }
+        ],
+        "active": true
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6e89g5hc-d901-8f86-c889-ch37dbd1d1h3",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "6e89g5hc-d901-8f86-c889-ch37dbd1d1h3",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "practitioner": {
+          "reference": "Practitioner/5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
+        },
+        "organization": {
+          "reference": "Organization/2a45c1d8-9567-4b42-8445-8d939f79c9d9"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                "code": "doctor",
+                "display": "Primary care provider"
+              }
+            ]
+          }
+        ],
+        "active": true
+      },
+      "request": {
+        "method": "PUT",
+        "url": "PractitionerRole/6e89g5hc-d901-8f86-c889-ch37dbd1d1h3"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7f90h6id-e012-9g97-d990-di48ece2e2i4",
+      "resource": {
+        "resourceType": "HealthcareService",
+        "id": "7f90h6id-e012-9g97-d990-di48ece2e2i4",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "name": "Online consultation",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                "code": "124",
+                "display": "Primary care service"
+              }
+            ]
+          }
+        ],
+        "providedBy": {
+          "reference": "Organization/2a45c1d8-9567-4b42-8445-8d939f79c9d9"
+        },
+        "active": true
+      },
+      "request": {
+        "method": "PUT",
+        "url": "HealthcareService/7f90h6id-e012-9g97-d990-di48ece2e2i4"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8g01i7je-f123-0h08-e001-ej59fcf3f3j6",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "8g01i7je-f123-0h08-e001-ej59fcf3f3j6",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "link": [
+          {
+            "other": {
+              "reference": "Person/1e777fdb-8c91-4c3c-8669-83b427c6a4e4"
+            },
+            "type": "refer"
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/2a45c1d8-9567-4b42-8445-8d939f79c9d9"
+        },
+        "active": true
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9h12j8kf-g234-1i19-f112-fk60gdg4g4k7",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "9h12j8kf-g234-1i19-f112-fk60gdg4g4k67",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "status": "fulfilled",
+        "start": "2025-02-15T08:00:00+08:00",
+        "end": "2025-02-15T08:30:00+08:00",
+        "participant": [
+          {
+            "actor": {
+              "reference": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+            },
+            "status": "accepted"
+          },
+          {
+            "actor": {
+              "reference": "Practitioner/5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
+            },
+            "status": "accepted"
+          }
+        ],
+        "description": "Chief complaint: stomach pain"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Appointment/9h12j8kf-g234-1i19-f112-fk60gdg4g4k7"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0i23k9lg-h345-2j20-g223-gl71heh5h5l8",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0i23k9lg-h345-2j20-g223-gl71heh5h5l78",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
+            }
+          }
+        ],
+        "appointment": [{
+          "reference": "Appointment/9h12j8kf-g234-1i19-f112-fk60gdg4g4k7"
+        }],
+        "period": {
+          "start": "2025-02-15T08:08:00+08:00",
+          "end": "2025-02-15T08:25:00+08:00"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0i23k9lg-h345-2j20-g223-gl71heh5h5l8"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1j34l0mh-i456-3k31-h334-hm82ifi6i6m9",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "1j34l0mh-i456-3k31-h334-hm82ifi6i6m9",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "K25.9",
+              "display": "Gastric ulcer"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+        },
+        "encounter": {
+          "reference": "Encounter/0i23k9lg-h345-2j20-g223-gl71heh5h5l8"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/1j34l0mh-i456-3k31-h334-hm82ifi6i6m9"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2k45m1ni-j567-4l42-i445-in93jgj7j7n0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2k45m1ni-j567-4l42-i445-in93jgj7j7n9",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+        },
+        "encounter": {
+          "reference": "Encounter/0i23k9lg-h345-2j20-g223-gl71heh5h5l8"
+        },
+        "effectiveDateTime": "2025-02-15T08:10:00+08:00",
+        "valueQuantity": {
+          "value": 37.8,
+          "unit": "°C",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/2k45m1ni-j567-4l42-i445-in93jgj7j7n0"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3l56n2oj-k678-5m53-j556-jo04khk8k8o1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3l56n2oj-k678-5m53-j556-jo04khk8k8o1",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+        },
+        "encounter": {
+          "reference": "Encounter/0i23k9lg-h345-2j20-g223-gl71heh5h5l8"
+        },
+        "effectiveDateTime": "2025-02-15T08:12:00+08:00",
+        "valueQuantity": {
+          "value": 65,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/3l56n2oj-k678-5m53-j556-jo04khk8k8o1"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4m67o3pk-l789-6n64-k667-kp15lil9l9p2",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "4m67o3pk-l789-6n64-k667-kp15lil9l9p2",
+        "extension": [
+          {
+            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
+            "valueString": "SeeYouDoc"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "103693007",
+                "display": "Diagnostic procedure"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11429006",
+              "display": "Consultation with gastroenterologist"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+        },
+        "encounter": {
+          "reference": "Encounter/0i23k9lg-h345-2j20-g223-gl71heh5h5l8"
+        },
+        "performer": [{
+          "reference": "Organization/3b56d2e9-a678-5c53-9556-9e04a8a8a8e0"
+        }],
+        "authoredOn": "2025-02-15T08:25:00+08:00",
+        "requester": {
+          "reference": "Practitioner/5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/4m67o3pk-l789-6n64-k667-kp15lil9l9p2"
+      }
+    }
+  ]
+}
