@@ -443,6 +443,12 @@
               "reference": "Practitioner/5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
             },
             "status": "accepted"
+          },
+          {
+            "actor": {
+          "reference": "HealthcareService/7f90h6id-e012-9g97-d990-di48ece2e2i4"
+            },
+            "status": "accepted"
           }
         ],
         "description": "Chief complaint: stomach pain"
