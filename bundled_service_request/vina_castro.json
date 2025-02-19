@@ -65,6 +65,22 @@
       "resource": {
         "resourceType": "Organization",
         "id": "2a45c1d8-9567-4b42-8445-8d939f79c9d9",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Organization",
+            "value": "2a45c1d8-9567-4b42-8445-8d939f79c9d9"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -95,13 +111,29 @@
       "resource": {
         "resourceType": "Organization",
         "id": "3b56d2e9-a678-5c53-9556-9e04a8a8a8e0",
-        "extension": [
+        "identifier": [
           {
-            "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
-            "valueString": "SeeYouDoc"
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.wah.ph/fhir/Organization",
+            "value": "3b56d2e9-a678-5c53-9556-9e04a8a8a8e0f"
           }
         ],
-        "name": "Metro Antipolo",
+        "extension": [
+          {
+            "url": "https://www.wah.ph/fhir/StructureDefinition/system-source",
+            "valueString": "Wireless Access for Health"
+          }
+        ],
+        "name": "Ospital ng Maynila Medical Center",
         "type": [
           {
             "coding": [
@@ -125,6 +157,22 @@
       "resource": {
         "resourceType": "Location",
         "id": "4c67e3fa-b789-6d64-a667-af15b9b9b9f1",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Location",
+            "value": "4c67e3fa-b789-6d64-a667-af15b9b9b9f1"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -158,6 +206,22 @@
       "resource": {
         "resourceType": "Practitioner",
         "id": "5d78f4gb-c890-7e75-b778-bg26cac0c0g2",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Practitioner",
+            "value": "5d78f4gb-c890-7e75-b778-bg26cac0c0g2"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -197,6 +261,22 @@
       "resource": {
         "resourceType": "PractitionerRole",
         "id": "6e89g5hc-d901-8f86-c889-ch37dbd1d1h3",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/PractitionerRole",
+            "value": "6e89g5hc-d901-8f86-c889-ch37dbd1d1h3"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -232,6 +312,22 @@
       "resource": {
         "resourceType": "HealthcareService",
         "id": "7f90h6id-e012-9g97-d990-di48ece2e2i4",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/PractitionerRole",
+            "value": "6e89g5hc-d901-8f86-c889-ch37dbd1d1h3"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -265,6 +361,22 @@
       "resource": {
         "resourceType": "Patient",
         "id": "8g01i7je-f123-0h08-e001-ej59fcf3f3j6",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Patient",
+            "value": "8g01i7je-f123-0h08-e001-ej59fcf3f3j6"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -294,6 +406,22 @@
       "resource": {
         "resourceType": "Appointment",
         "id": "9h12j8kf-g234-1i19-f112-fk60gdg4g4k67",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Patient",
+            "value": "9h12j8kf-g234-1i19-f112-fk60gdg4g4k67"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -329,6 +457,22 @@
       "resource": {
         "resourceType": "Encounter",
         "id": "0i23k9lg-h345-2j20-g223-gl71heh5h5l78",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Patient",
+            "value": "0i23k9lg-h345-2j20-g223-gl71heh5h5l78"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -369,6 +513,22 @@
       "resource": {
         "resourceType": "Condition",
         "id": "1j34l0mh-i456-3k31-h334-hm82ifi6i6m9",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Condition",
+            "value": "1j34l0mh-i456-3k31-h334-hm82ifi6i6m9"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -419,6 +579,22 @@
       "resource": {
         "resourceType": "Observation",
         "id": "2k45m1ni-j567-4l42-i445-in93jgj7j7n9",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Observation",
+            "value": "2k45m1ni-j567-4l42-i445-in93jgj7j7n9"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -459,6 +635,22 @@
       "resource": {
         "resourceType": "Observation",
         "id": "3l56n2oj-k678-5m53-j556-jo04khk8k8o1",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/Observation",
+            "value": "3l56n2oj-k678-5m53-j556-jo04khk8k8o1"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
@@ -499,6 +691,22 @@
       "resource": {
         "resourceType": "ServiceRequest",
         "id": "4m67o3pk-l789-6n64-k667-kp15lil9l9p2",
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SNO",
+                  "display": "Serial Number"
+                }
+              ],
+              "text": "Source System Identifier"
+            },
+            "system": "https://www.seeyoudoc.com/fhir/ServiceRequest",
+            "value": "4m67o3pk-l789-6n64-k667-kp15lil9l9p2"
+          }
+        ],
         "extension": [
           {
             "url": "https://www.seeyoudoc.com/fhir/StructureDefinition/system-source",
