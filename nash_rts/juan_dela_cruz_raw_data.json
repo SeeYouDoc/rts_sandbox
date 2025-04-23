@@ -1,0 +1,61 @@
+{
+  "formHeader": {
+    "title": "Uniform Referral Form",
+    "networkName": "HEALTH CARE PROVIDER NETWORK"
+  },
+  "initiatingFacility": {
+    "name": "Medical Center Manila",
+    "contactNumber": "+6328876543",
+    "address": "1234 Taft Avenue, Manila, Metro Manila, 1000, PH"
+  },
+  "referralDetails": {
+    "dateOfReferral": "2025-03-10",
+    "timeCalled": "09:00",
+    "receivingFacility": {
+      "name": "Philippine General Hospital",
+      "address": "Taft Avenue, Ermita, Manila, 1000",
+      "receivingPersonnel": "Dr. Ricardo Santos",
+      "response": "Accepted"
+    }
+  },
+  "referralCategory": "Outpatient",
+  "workingImpression": "Acute viral upper respiratory infection needing specialist evaluation",
+  "reasonForReferral": {
+    "consultation": true,
+    "diagnostics": false,
+    "treatmentProcedure": false,
+    "others": false,
+    "details": "Cardiology consultation for persistent fever"
+  },
+  "patient": {
+    "name": "Juan Dela Cruz",
+    "identityNumber": "010203040506",
+    "age": "35",
+    "sex": "Male",
+    "address": "123 Rizal Street, Barangay San Jose, Manila, Metro Manila, 1000, PH",
+    "chiefComplaint": "Fever for 3 days, persistent cough",
+    "clinicalHistory": "Patient reports exposure to family members with similar symptoms."
+  },
+  "findings": {
+    "vitalSigns": {
+      "bloodPressure": "120/80",
+      "pulseRate": "88",
+      "respiratoryRate": "20",
+      "oxygenSaturation": "98",
+      "temperature": "38.5",
+      "weight": "70"
+    },
+    "laboratoryResults": "CBC shows mild leukocytosis. Chest X-ray normal."
+  },
+  "treatmentGiven": "Paracetamol 500mg tablet, 1 tab every 4-6 hours as needed for fever",
+  "attribution": {
+    "healthProfessional": {
+      "name": "Dr. Maria Santos",
+      "signature": "M. Santos, MD",
+      "dateTime": "2025-03-10T10:30:00+08:00"
+    }
+  },
+  "returnSlip": {
+    "actionPoint": "Referred"
+  }
+}

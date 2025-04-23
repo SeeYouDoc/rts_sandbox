@@ -1,0 +1,894 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-4195-92b7-41bbb3204af6",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "ph-service-request-referral",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-service-request"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://mcm.example.com/identifier/referral",
+            "value": "REF-2025-34567"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/service-category",
+                "code": "124",
+                "display": "General Medicine"
+              }
+            ],
+            "text": "Outpatient Referral"
+          }
+        ],
+        "priority": "routine",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11429006",
+              "display": "Consultation"
+            }
+          ],
+          "text": "Cardiology consultation for persistent fever"
+        },
+        "subject": {
+          "reference": "urn:uuid:6b7cbbf3-c8f7-4f68-8d64-862c39f309d2",
+          "display": "Juan Dela Cruz"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eadd4bfc-cb9f-46ef-aade-01dae3b38b8f"
+        },
+        "occurrenceDateTime": "2025-03-10",
+        "authoredOn": "2025-03-10T09:00:00+08:00",
+        "requester": {
+          "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+          "display": "Dr. Maria Santos"
+        },
+        "performer": [
+          {
+            "reference": "urn:uuid:2c284c27-3c3a-4b17-9e5f-07965d9a797c",
+            "display": "Dr. Ricardo Santos"
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "386661006",
+                "display": "Fever"
+              }
+            ],
+            "text": "Fever for 3 days, persistent cough"
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "urn:uuid:7c5c15e8-cdc0-4e60-a23c-2e7596c9229e",
+            "display": "Acute viral upper respiratory infection"
+          }
+        ],
+        "note": [
+          {
+            "text": "Patient was initially seen at Medical Center Manila with a 3-day history of fever. Requiring cardiology evaluation."
+          }
+        ],
+        "patientInstruction": "Please bring all previous medical records and test results.",
+        "supportingInfo": [
+          {
+            "reference": "urn:uuid:d9072a37-a1a3-4e7c-b35f-a5d0b2c6f935"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://philcore.fhirpath.io/StructureDefinition/ph-service-request-priority",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://philcore.fhirpath.io/CodeSystem/ph-service-request-priority",
+                  "code": "ROUTINE",
+                  "display": "Routine - Next regular schedule"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://philcore.fhirpath.io/StructureDefinition/ph-service-request-authorization",
+            "extension": [
+              {
+                "url": "authorizationNumber",
+                "valueString": "AUTH-2025-78901"
+              },
+              {
+                "url": "authorizationDate",
+                "valueDateTime": "2025-03-10T09:00:00+08:00"
+              },
+              {
+                "url": "authorizingPerson",
+                "valueReference": {
+                  "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+                  "display": "Dr. Maria Santos"
+                }
+              },
+              {
+                "url": "authorizingOrganization",
+                "valueReference": {
+                  "reference": "urn:uuid:a2f399f0-25b7-4c35-89d0-e334b25e9f44",
+                  "display": "Medical Center Manila"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "ServiceRequest"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b7cbbf3-c8f7-4f68-8d64-862c39f309d2",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "ph-patient-referral",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PLAC",
+                  "display": "PhilHealth Member Identification Number"
+                }
+              ],
+              "text": "PhilHealth ID"
+            },
+            "system": "http://philhealth.gov.ph/identifier/memberid",
+            "value": "010203040506"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Dela Cruz",
+            "given": [
+              "Juan",
+              "Santos"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+639171234567",
+            "use": "mobile"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1990-01-15",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical",
+            "line": [
+              "123 Rizal Street",
+              "Barangay San Jose"
+            ],
+            "city": "Manila",
+            "district": "First District",
+            "state": "Metro Manila",
+            "postalCode": "1000",
+            "country": "PH"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://philcore.fhirpath.io/StructureDefinition/ph-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://philcore.fhirpath.io/CodeSystem/ph-religion",
+                  "code": "RC",
+                  "display": "Roman Catholic"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://philcore.fhirpath.io/StructureDefinition/ph-nationality",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:iso:std:iso:3166",
+                  "code": "PH",
+                  "display": "Filipino"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "ph-practitioner-referrer",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "MD",
+                  "display": "Medical License Number"
+                }
+              ],
+              "text": "PRC License"
+            },
+            "system": "http://prc.gov.ph/identifier/license",
+            "value": "0012345"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Santos",
+            "given": [
+              "Maria",
+              "Luisa"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://philcore.fhirpath.io/CodeSystem/ph-professional-qualification",
+                  "code": "MD",
+                  "display": "Doctor of Medicine"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c284c27-3c3a-4b17-9e5f-07965d9a797c",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "ph-practitioner-receiver",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://pgh.example.com/identifier/practitioners",
+            "value": "PGH-12345"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Santos",
+            "given": [
+              "Ricardo"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://philcore.fhirpath.io/CodeSystem/ph-professional-qualification",
+                  "code": "CARDIO",
+                  "display": "Cardiology"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a2f399f0-25b7-4c35-89d0-e334b25e9f44",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ph-organization-referrer",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "XX",
+                  "display": "Organization Identifier"
+                }
+              ],
+              "text": "DOH License Number"
+            },
+            "system": "http://doh.gov.ph/identifier/facility",
+            "value": "13-0001-22-H3-2"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://philcore.fhirpath.io/CodeSystem/ph-organization-type",
+                "code": "HOSP",
+                "display": "Hospital"
+              }
+            ]
+          }
+        ],
+        "name": "Medical Center Manila",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+6328876543",
+            "use": "work"
+          }
+        ],
+        "address": [
+          {
+            "use": "work",
+            "type": "both",
+            "line": [
+              "1234 Taft Avenue"
+            ],
+            "city": "Manila",
+            "state": "Metro Manila",
+            "postalCode": "1000",
+            "country": "PH"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5d31e72f-9f3a-4ebb-b869-308d5d80647a",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "ph-organization-receiver",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://doh.gov.ph/identifier/facility",
+            "value": "13-0002-22-H3-1"
+          }
+        ],
+        "active": true,
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://philcore.fhirpath.io/CodeSystem/ph-organization-type",
+                "code": "HOSP",
+                "display": "Hospital"
+              }
+            ]
+          }
+        ],
+        "name": "Philippine General Hospital",
+        "address": [
+          {
+            "use": "work",
+            "line": [
+              "Taft Avenue", 
+              "Ermita"
+            ],
+            "city": "Manila",
+            "postalCode": "1000",
+            "country": "PH"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eadd4bfc-cb9f-46ef-aade-01dae3b38b8f",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "ph-encounter-referral",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "270427003",
+                "display": "Patient-initiated encounter"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:6b7cbbf3-c8f7-4f68-8d64-862c39f309d2",
+          "display": "Juan Dela Cruz"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "ATND",
+                    "display": "attender"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+              "display": "Dr. Maria Santos"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-03-10T09:00:00+08:00",
+          "end": "2025-03-10T10:30:00+08:00"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "386661006",
+                "display": "Fever"
+              }
+            ],
+            "text": "Fever for 3 days, persistent cough"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "urn:uuid:7c5c15e8-cdc0-4e60-a23c-2e7596c9229e",
+              "display": "Acute viral upper respiratory infection"
+            },
+            "rank": 1,
+            "use": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                  "code": "AD",
+                  "display": "Admission diagnosis"
+                }
+              ]
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "urn:uuid:a2f399f0-25b7-4c35-89d0-e334b25e9f44",
+          "display": "Medical Center Manila"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c5c15e8-cdc0-4e60-a23c-2e7596c9229e",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "ph-condition-referral",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-condition"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "6736007",
+              "display": "Moderate"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "54150009",
+              "display": "Acute viral upper respiratory infection"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J06.9",
+              "display": "Acute upper respiratory infection, unspecified"
+            }
+          ],
+          "text": "Acute viral upper respiratory infection"
+        },
+        "subject": {
+          "reference": "urn:uuid:6b7cbbf3-c8f7-4f68-8d64-862c39f309d2",
+          "display": "Juan Dela Cruz"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eadd4bfc-cb9f-46ef-aade-01dae3b38b8f"
+        },
+        "onsetDateTime": "2025-03-07T00:00:00+08:00",
+        "recordedDate": "2025-03-10T09:30:00+08:00",
+        "recorder": {
+          "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+          "display": "Dr. Maria Santos"
+        },
+        "asserter": {
+          "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+          "display": "Dr. Maria Santos"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "386661006",
+                    "display": "Fever"
+                  }
+                ]
+              },
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "49727002",
+                    "display": "Cough"
+                  }
+                ]
+              }
+            ],
+            "detail": [
+              {
+                "reference": "urn:uuid:d9072a37-a1a3-4e7c-b35f-a5d0b2c6f935",
+                "display": "Temperature 38.5°C"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d9072a37-a1a3-4e7c-b35f-a5d0b2c6f935",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ph-observation-vital-signs",
+        "meta": {
+          "profile": [
+            "http://philcore.fhirpath.io/StructureDefinition/ph-observation"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85353-1",
+              "display": "Vital signs, weight, height, BMI, head circumference, and blood pressure panel"
+            }
+          ],
+          "text": "Vital Signs Panel"
+        },
+        "subject": {
+          "reference": "urn:uuid:6b7cbbf3-c8f7-4f68-8d64-862c39f309d2",
+          "display": "Juan Dela Cruz"
+        },
+        "encounter": {
+          "reference": "urn:uuid:eadd4bfc-cb9f-46ef-aade-01dae3b38b8f"
+        },
+        "effectiveDateTime": "2025-03-10T09:15:00+08:00",
+        "issued": "2025-03-10T09:20:00+08:00",
+        "performer": [
+          {
+            "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+            "display": "Dr. Maria Santos"
+          }
+        ],
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8310-5",
+                  "display": "Body temperature"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 38.5,
+              "unit": "°C",
+              "system": "http://unitsofmeasure.org",
+              "code": "Cel"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8867-4",
+                  "display": "Heart rate"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 88,
+              "unit": "beats/minute",
+              "system": "http://unitsofmeasure.org",
+              "code": "/min"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 120,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 80,
+              "unit": "mmHg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mm[Hg]"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "9279-1",
+                  "display": "Respiratory rate"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 20,
+              "unit": "breaths/minute",
+              "system": "http://unitsofmeasure.org",
+              "code": "/min"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "2708-6",
+                  "display": "Oxygen saturation in Arterial blood"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 98,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "%"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "29463-7",
+                  "display": "Body weight"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 70,
+              "unit": "kg",
+              "system": "http://unitsofmeasure.org",
+              "code": "kg"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:85d8ca0c-5b9d-4e25-833d-8751cb854bc8",
+      "resource": {
+        "resourceType": "Communication",
+        "id": "ph-communication-referral",
+        "status": "completed",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/communication-category",
+                "code": "notification",
+                "display": "Notification"
+              }
+            ],
+            "text": "Referral Communication"
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:6b7cbbf3-c8f7-4f68-8d64-862c39f309d2",
+          "display": "Juan Dela Cruz"
+        },
+        "sent": "2025-03-10T09:00:00+08:00",
+        "received": "2025-03-10T09:15:00+08:00",
+        "recipient": [
+          {
+            "reference": "urn:uuid:2c284c27-3c3a-4b17-9e5f-07965d9a797c",
+            "display": "Dr. Ricardo Santos"
+          },
+          {
+            "reference": "urn:uuid:5d31e72f-9f3a-4ebb-b869-308d5d80647a",
+            "display": "Philippine General Hospital"
+          }
+        ],
+        "sender": {
+          "reference": "urn:uuid:fb48f684-6d35-4bf3-9eea-24646f8e974f",
+          "display": "Dr. Maria Santos"
+        },
+        "payload": [
+          {
+            "contentReference": {
+              "reference": "urn:uuid:3af3232e-1579-4195-92b7-41bbb3204af6"
+            }
+          }
+        ],
+        "note": [
+          {
+            "text": "Referral was acknowledged and accepted by receiving facility."
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Communication"
+      }
+    }
+  ]
+}
